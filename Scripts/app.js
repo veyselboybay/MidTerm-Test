@@ -1,21 +1,23 @@
 // setup your IIFE (Immediately Invoked Function Expression)
 //  AUTHOR : VEYSEL BOYBAY
-//  FILE NAME : INDEX.HTML
+//  FILE NAME : APP.JS
 //  WEB SITE : https://veyselboybay.github.io/MidTerm-Test/
-//  FILE DESCRIPTION : THIS FILE CONTAINS WEB SITE IMAGE CONTENTS AND GENERAL PAGE STRUCTURE
+//  FILE DESCRIPTION : THIS FILE CONTAINS JAVASCRIPTS AND PAGE'S CONTENTS
+
 
 
 (function () {
 "use strict";
-
+    let formInput="";
 
     function Start()
     {
         Paragraphs();
-
+        
     }
 
     window.addEventListener("load",Start);
+    
 
     function Paragraphs()
     {
@@ -63,6 +65,35 @@
         gavdos.textContent="Near the more well-known Crete, Gavdos is the most southern island in Greece — and the most southern spot in Europe discounting the Canaries. Only accessible by ferry, the remote island has only about 50 permanent residents, and can feel like your private playground. Local legend has it that the island was the home of goddess Calypso, who kept Odysseus prisoner here. Today, a favorite tourist activity is to visit the spot believed to be her cave. Be warned, you won't find any luxury hotels here. While the romantically under-developed, super laid back island has a number of rooms for rent, those are limited, as the real draw here for many is the free, seaside camping.";
 
     }
+
+
+    
+    function SubmitForm()
+    {
+        
+        
+        let inputData=document.getElementsByClassName("form-control");
+                
+        let request="Name: "+inputData[0].value+
+        " \nLastName: "+inputData[1].value+
+        " \nPhone Number: "+inputData[2].value+
+        " \nEmail: "+inputData[3].value+
+        "\nMessage: "+inputData[4].value;
+        
+        
+        
+       console.log(request)
+        
+       
+    }
+
+    let submitbutton=document.getElementById("sendButton");
+    submitbutton.addEventListener("click",(event)=>
+    {
+        event.preventDefault();
+        SubmitForm();
+    })
+    
 
 })();
 
