@@ -2,7 +2,7 @@
 //  AUTHOR : VEYSEL BOYBAY
 //  FILE NAME : APP.JS
 //  WEB SITE : https://veyselboybay.github.io/MidTerm-Test/
-//  FILE DESCRIPTION : THIS FILE CONTAINS JAVASCRIPTS AND PAGE'S CONTENTS
+//  FILE DESCRIPTION : THIS FILE CONTAINS JAVASCRIPTS AND PAGE'S IMAGE DESCRIPTION CONTENTS
 
 
 
@@ -67,18 +67,20 @@
     }
 
 
-    
+    //THIS FUNCTION WILL FETCH THE USER ENTERED VALUES
+    //AFTER FETCHING VALUES, IT WILL DISPLAY IT ON CONSOLE
     function SubmitForm()
     {
         
         
         let inputData=document.getElementsByClassName("form-control");
                 
-        let request="Name: "+inputData[0].value+
+        let request=
+        "Name: "+inputData[0].value+
         " \nLastName: "+inputData[1].value+
         " \nPhone Number: "+inputData[2].value+
         " \nEmail: "+inputData[3].value+
-        "\nMessage: "+inputData[4].value;
+        " \nMessage: "+inputData[4].value;
         
         
         
@@ -87,6 +89,7 @@
        
     }
 
+    //THIS EVENTLISTENER AVOIDS SUBMIT EVENT'S DEFAULT EXECUTION TO BE ABLE TO DISPLAY THE VALUES ON CONSOLE
     let submitbutton=document.getElementById("sendButton");
     submitbutton.addEventListener("click",(event)=>
     {
